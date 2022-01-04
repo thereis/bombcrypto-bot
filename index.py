@@ -197,12 +197,13 @@ def positions(target, threshold=ct['default'],img = None):
     return rectangles
 
 def scroll():
+    dividers = positions(images['divider'], threshold = ct['divider'])
 
-    commoms = positions(images['commom-text'], threshold = ct['commom'])
-    if (len(commoms) == 0):
+    if (len(dividers) == 0):
         return
-    x,y,w,h = commoms[len(commoms)-1]
-#
+
+    x,y,w,h = dividers[len(dividers)-1]
+
     moveToWithRandomness(x,y,1)
 
     if not c['use_click_and_drag_instead_of_scroll']:
