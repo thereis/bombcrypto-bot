@@ -59,6 +59,13 @@
     # Valor padrão: 0.7
     default: 0.7
 
+    # [en_US] Time interval to refresh page
+    # Default value (in seconds): 1 
+    #
+    # [pt_BR] Intervalo de tempo para atualizar a página
+    # Valor padrão (em minutos): 30
+    check_for_refresh_page: 20
+
     # [en_US]
     # Default value: 0.8
     #
