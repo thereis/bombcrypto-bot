@@ -195,9 +195,9 @@ def scroll():
     if (len(dividers) == 0):
         return
 
-    x,y,w,h = dividers[len(dividers)-1]
+    x, y, w, h = dividers[len(dividers)-1]
 
-    moveToWithRandomness(x,y,1)
+    moveToWithRandomness(x, y, 1)
 
     if not c['use_click_and_drag_instead_of_scroll']:
         pyautogui.scroll(-c['scroll_size'])
@@ -485,7 +485,7 @@ def main():
         "new_map": 0,
         "check_for_captcha": 0,
         "refresh_heroes": 0,
-        "refresh_page" : time.time()
+        "refresh_page": time.time()
     }
     # =========
 
@@ -495,7 +495,7 @@ def main():
         if now - last["refresh_page"] > t['check_for_refresh_page'] * 60:
             logger('Refreshing Page')
             last["refresh_page"] = now
-            pyautogui.hotkey('ctrl','f5')
+            pyautogui.hotkey('ctrl', 'f5')
 
         if now - last["check_for_captcha"] > addRandomness(t['check_for_captcha'] * 60):
             last["check_for_captcha"] = now
